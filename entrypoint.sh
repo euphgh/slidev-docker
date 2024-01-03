@@ -8,8 +8,8 @@ if [ -f /slidev/slides.md ]; then
     else
         npm install @slidev/cli @slidev/theme-default @slidev/theme-seriph
     fi
-    echo "Start slidev..."
-    npx slidev --remote
+    echo "Start slidev with arguments $@"
+    npx slidev $@
 else
     echo "slides.md not found in the bind mount to /slidev"
     npm install @slidev/cli @slidev/theme-default @slidev/theme-seriph
